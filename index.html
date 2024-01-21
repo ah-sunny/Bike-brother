@@ -4,16 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bike Brother</title>
+
+    <!-- tailwind css and DaisyUi added link -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind custom -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary-clr": '#E76F51',
+              "banner-bg": 'rgba(231, 111, 81, 0.10)'
+            }
+          }
+        }
+      }
+    </script>
+    
 </head>
-<body>
-   <header>
+<body class=" bg-white ">
+  <header class="h-auto">
+   <section class="text-black bg-white">
+       <!-- navbar -->
+       <div class="w-11/12 m-auto navbar  ">
+        <div class="navbar-start ">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>News</a></li>
+              <li><a>contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">Bike Brother</a>
+        </div>
+        <div class="navbar-end m-auto hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+              <li><a>News</a></li>
+              <li><a>contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end  flex-1 md:w-auto ml-5">
+          <a class="btn bg-primary-clr text-white">Log In</a>
+        </div>
+      </div>
+   </section>
 
-   </header>
-   <main>
+   <!-- banner part --> 
+   <section class="w-11/12  m-auto my-14">
+    <div class="carousel w-full h-auto md:h-[450px]">
+      <!-- slide-1 -->
+      <div id="slide1" class="carousel-item relative w-full">
+       
+        <div class="flex flex-col md:flex-row justify-between items-center p-3 md:p-14 rounded-2xl bg-banner-bg ">
+              <div class=" text-black space-y-7  md:w-[50%]">
+                <h1 class="text-6xl text-black font-bold">Ride-on R15 V4 with Smile</h1>
+                <p class="text-base "> Amet minim mollit non deserunt ullamco 
+                  est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                <button class="btn bg-primary-clr text-white"><a>Purchase</a></button>
+              </div>
+              <div class="img_part ">
+                 <img src="images/slider/bike1.png" class="w-full" />
+              </div>
+        </div>
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide4" class="btn btn-circle">❮</a> 
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+      </div> 
+      <!-- slide-2 -->
+      <div id="slide2" class="carousel-item relative w-full">
+        <div class="flex flex-col md:flex-row justify-between items-center p-3 md:p-14 rounded-2xl bg-banner-bg ">
+          <div class=" text-black space-y-7  md:w-[50%]">
+            <h1 class="text-6xl text-black font-bold">Ride-on R15 V4 with Smile</h1>
+            <p class="text-base "> Amet minim mollit non deserunt ullamco 
+              est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+            <button class="btn bg-primary-clr text-white"><a>Purchase</a></button>
+          </div>
+          <div class="img_part ">
+             <img src="images/slider/bike2.png" class="w-full" />
+          </div>
+    </div>
+        <!-- <img src="images/slider/bike2.png" class="w-full" /> -->
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide1" class="btn btn-circle">❮</a> 
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div> 
+      <!-- slide -3 -->
+      <div id="slide3" class="carousel-item relative w-full">
+        <div class="flex flex-col md:flex-row justify-between items-center p-3 md:p-14 rounded-2xl bg-banner-bg ">
+          <div class=" text-black space-y-7  md:w-[50%]">
+            <h1 class="text-6xl text-black font-bold">Ride-on R15 V4 with Smile</h1>
+            <p class="text-base "> Amet minim mollit non deserunt ullamco 
+              est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+            <button class="btn bg-primary-clr text-white"><a>Purchase</a></button>
+          </div>
+          <div class="img_part ">
+             <img src="images/slider/bike3.png" class="w-full" />
+          </div>
+    </div>
+        <!-- <img src="images/slider/bike3.png" class="w-full" /> -->
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide2" class="btn btn-circle">❮</a> 
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div> 
+      <!-- slide -4 -->
+      <div id="slide4" class="carousel-item relative w-full">
+        <div class="flex flex-col md:flex-row justify-between items-center p-3 md:p-14 rounded-2xl bg-banner-bg ">
+          <div class=" text-black space-y-7  md:w-[50%]">
+            <h1 class="text-6xl text-black font-bold">Ride-on R15 V4 with Smile</h1>
+            <p class="text-base "> Amet minim mollit non deserunt ullamco 
+              est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+            <button class="btn bg-primary-clr text-white"><a>Purchase</a></button>
+          </div>
+          <div class="img_part ">
+             <img src="images/slider/bike4.png" class="w-full" />
+          </div>
+    </div>
+        <!-- <img src="images/slider/bike4.png" class="w-full" /> -->
+        <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+          <a href="#slide3" class="btn btn-circle">❮</a> 
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
+   </section>
+</header>
+   <main >
+    <section>
 
+    </section>
+        <h4>hello</h4>
    </main>
     <footer>
-        
+
     </footer>
 
 
